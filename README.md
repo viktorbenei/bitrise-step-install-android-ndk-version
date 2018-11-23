@@ -9,9 +9,8 @@ to the configuration, in the `steps` section. Example:
 
 ```
 workflows:
-  install-android-ndk:
+  primary:
     steps:
-
     - git::https://github.com/viktorbenei/bitrise-step-install-android-ndk-version.git@master:
         inputs:
         - android_ndk_version: r12b
