@@ -2,8 +2,22 @@
 
 Install a specific Android NDK version.
 
-
 ## How to use this Step
+
+To include this step in your `bitrise.yml` add `- git::https://github.com/viktorbenei/bitrise-step-install-android-ndk-version.git@master:`
+to the configuration, in the `steps` section. Example:
+
+```
+workflows:
+  install-android-ndk:
+    steps:
+
+    - git::https://github.com/viktorbenei/bitrise-step-install-android-ndk-version.git@master:
+        inputs:
+        - android_ndk_version: r12b
+```
+
+To test the step locally:
 
 Can be run directly with the [bitrise CLI](https://github.com/bitrise-io/bitrise),
 just `git clone` this repository, `cd` into it's folder in your Terminal/Command Line
