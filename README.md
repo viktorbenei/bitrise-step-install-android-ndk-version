@@ -9,11 +9,17 @@ to the configuration, in the `steps` section. Example:
 
 ```
 workflows:
+  # the workflow you want to add the step to
   primary:
     steps:
+    # this step can be the very first one in the workflow
+
     - git::https://github.com/viktorbenei/bitrise-step-install-android-ndk-version.git@master:
         inputs:
         - android_ndk_version: r12b
+
+    # other steps
+    # ...
 ```
 
 To test the step locally:
