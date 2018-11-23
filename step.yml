@@ -51,10 +51,8 @@ run_if: ""
 
 deps:
   brew:
-  - name: git
   - name: wget
   apt_get:
-  - name: git
   - name: wget
 
 
@@ -64,24 +62,14 @@ toolkit:
 
 
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - android_ndk_version: r15b
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
+      title: "Android NDK version to install"
+      summary: Android NDK version to install
       description: |
-        Description of this input.
+        Android NDK version to install.
+        For available archives see [https://developer.android.com/ndk/downloads/older_releases](https://developer.android.com/ndk/downloads/older_releases).
 
-        Can be Markdown formatted text.
-      is_expand: true
+        Example: `r15b`
       is_required: true
-      value_options: []
 
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
-    opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this output.
-
-        Can be Markdown formatted text.
